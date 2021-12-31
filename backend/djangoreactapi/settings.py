@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'post',
     'rest_framework', #추가
     'corsheaders', # 추가
+    'Box',
 
 ]
 
