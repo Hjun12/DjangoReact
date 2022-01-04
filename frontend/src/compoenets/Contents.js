@@ -1,39 +1,75 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
-} from 'recharts';
+import { useState, useEffect } from "react";
+import axios from "axios";
+// import { Bar } from "react-chartjs-2";
 
+const Contents = () => {
+  const [confirmedData, setConfirmedData] = useState({
+  })
 
-
-const Contens = () => {
-  const [data, setData] = useState('');
   useEffect(() => {
-    axios.get("http://localhost:8000/boxapi/")
-    .then(res => setData(res.data))
-      console.log(data)
-  },[]);
-  
-  return (
-    <div>
-        <LineChart
-        width={800}
-        height={500}
-        data={data}
-        margin={{
-          top: 5, right: 30, left: 20, bottom: 5,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="movieNm" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <Line type="monotone" dataKey="audiAcc" stroke="#8884d8" activeDot={{ r: 8 }} />
-        <Line type="monotone" dataKey="audiCnt" stroke="#82ca9d" />
-      </LineChart>
-        </div>
-  )
-}
+    const fetchEvents = async () => {
+      const res = await axios.get("http://openapi.seoul.go.kr:8088/746b4762786170703430676e6e4678/json/IotVdata018/1/5/")
+      console.log(res)
+      makeData(res.data);
+    }
+    const makeData = (items) => {
+      const arr = items.reduce((acc, cur) => {
+        return acc;
+      }, [])
+    }
+    //     const currentDate = new Date(cur.Date);
+    //     const year = currentDate.getFullYear();
+    //     const month = currentDate.getMonth();
+    //     const date = currentDate.getDate();
+        // const confirmed = cur.Confirmed;
+        // const active = cur.Active;
+        // const death = cur.Deaths;
+        // const recovered = cur.Recovered;
+        // console.log(year, month, date)
 
-export default Contens;
+        // const findItem = acc.find((a) => a.year === year && a.month === month);
+
+        // if (!findItem) {
+        //   acc.push({ year, month, date, confirmed, active, death, recovered });
+        // }
+        // if (findItem && findItem.date < date) {
+        //   findItem.active = active;
+        //   findItem.death = death;
+        //   findItem.date = date;
+        //   findItem.year = year;
+        //   findItem.confirmed = confirmed;
+        //   findItem.recovered = recovered;
+        //   findItem.month = month;
+        // }
+
+      //   return acc;
+      // }, []);
+
+      // const labels = arr.map((a) => `${a.month + 1}월`);
+      // setConfirmedData({
+      //   labels,
+      //   datasets: [
+      //     {
+      //       label: "국내 누적 확진자",
+      //       backgroundColor: "salmon",
+      //       fill: true,
+      //       data: arr.map((a) => a.confirmed),
+      //     },
+      //   ],
+      // });
+    // };
+
+    fetchEvents();
+  })
+
+  return (
+    <section>
+      <h2>그래프 내용</h2>
+      <div className="contents">
+       
+      </div>
+    </section>
+  );
+};
+
+export default Contents;

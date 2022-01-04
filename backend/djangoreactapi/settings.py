@@ -37,10 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'post',
     'rest_framework', #추가
     'corsheaders', # 추가
+    'Charts',
     'Box',
 
 ]
