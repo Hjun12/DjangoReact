@@ -1,18 +1,16 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import {ContentHeader} from '@components';
-import {LineChart, Line} from 'recharts';
+import {ContentHeader, ReactTable} from '@components';
 
-const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}];
 const Blank = () => {
     return (
         <div>
-            <ContentHeader title="Blank Page" />
+            <ContentHeader title="Table Page" />
             <section className="content">
                 <div className="container-fluid">
                     <div className="card">
                         <div className="card-header">
-                            <h3 className="card-title">Title</h3>
+                            <h3 className="card-title"> 외부 API 보여주기</h3>
                             <div className="card-tools">
                                 <button
                                     type="button"
@@ -35,17 +33,9 @@ const Blank = () => {
                             </div>
                         </div>
                         <div className="card-body">
-                            const renderLineChart = (
-                            <LineChart width={400} height={400} data={data}>
-                                <Line
-                                    type="monotone"
-                                    dataKey="uv"
-                                    stroke="#8884d8"
-                                />
-                            </LineChart>
-                            );
+                            <ReactTable />
                         </div>
-                        <div className="card-footer">Footer</div>
+                        <div className="card-footer">Footer</div>x
                     </div>
                 </div>
             </section>

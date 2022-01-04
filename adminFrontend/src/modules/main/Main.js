@@ -6,6 +6,7 @@ import {loadUser, logoutUser} from '@store/reducers/auth';
 import {toggleSidebarMenu} from '@app/store/reducers/ui';
 
 import Dashboard from '@pages/Dashboard';
+import Charts from '@pages/Charts';
 import Blank from '@pages/Blank';
 import SubMenu from '@pages/SubMenu';
 import Profile from '@pages/profile/Profile';
@@ -90,6 +91,7 @@ const Main = () => {
                             <Route exact path="/blank" component={Blank} />
                             <Route exact path="/profile" component={Profile} />
                             <Route exact path="/" component={Dashboard} />
+                            <Route exact path="/charts" component={Charts} />
                         </Switch>
                     </section>
                 </div>

@@ -9,7 +9,11 @@ export const MENU = [
         path: '/'
     },
     {
-        name: 'menusidebar.label.blank',
+        name: 'Charts',
+        path: '/charts'
+    },
+    {
+        name: 'Table',
         path: '/blank'
     },
     {
@@ -21,7 +25,7 @@ export const MENU = [
             },
 
             {
-                name: 'menusidebar.label.blank',
+                name: 'Table',
                 path: '/sub-menu-2'
             }
         ]
@@ -40,7 +44,7 @@ const MenuSidebar = () => {
                     className="brand-image img-circle elevation-3"
                     style={{opacity: '.8'}}
                 />
-                <span className="brand-text font-weight-light">배고파</span>
+                <span className="brand-text font-weight-light">OTTE_ADMIN</span>
             </Link>
             <div className="sidebar">
                 <div className="user-panel mt-3 pb-3 mb-3 d-flex">

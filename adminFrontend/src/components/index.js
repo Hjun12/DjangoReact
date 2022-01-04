@@ -7,6 +7,8 @@ import Dropdown from './dropdown/Dropdown';
 import MenuItem from './menu-item/MenuItem';
 import Checkbox from './checkbox/Checkbox';
 import Input from './input/Input';
+import MovieChart from './rechart-DB/MovieChart';
+import ReactTable from './rechart-DB/ReactTable';
 
 export {
     Button,
@@ -16,5 +18,7 @@ export {
     Dropdown,
     MenuItem,
     Checkbox,
-    Input
+    Input,
+    MovieChart,
+    ReactTable
 };
