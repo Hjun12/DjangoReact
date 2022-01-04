@@ -6,7 +6,7 @@ import {
 
 
 
-const Table = () => {
+const Contens = () => {
   const [data, setData] = useState('');
   useEffect(() => {
     axios.get("http://localhost:8000/boxapi/")
@@ -36,7 +36,4 @@ const Table = () => {
   )
 }
 
-export default Table
-
-
-
+export default Contens;

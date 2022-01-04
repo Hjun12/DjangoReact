@@ -1,4 +1,3 @@
-import React, { Component } from 'react'
 import Contents from '../compoenets/Contents'
 
 const Graph = () => {

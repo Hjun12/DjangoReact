@@ -1,48 +1,79 @@
-import React from "react";
-import { useTable } from "react-table";
-//import faker from "faker/locale/ko";
+import React, { Component } from 'react';
+import axios from "axios";
 
-function Table({ columns, data }) {
-  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-    useTable({ columns, data });
-  return (
-    <section class="sub_wrap">
-      <article class="s_cnt mp_pro_li ct1 mp_pro_li_admin">
-        <div class="li_top">
-          <div>
-            <h2 class="s_tit1">This is where Table will come</h2>
-          </div>
-        </div>
-        <div class="list_cont list_cont_admin">
-          <table class="table_ty1 fp_tlist" {...getTableProps()}>
-            <thead>
-              {headerGroups.map((headerGroup) => (
-                <tr {...headerGroup.getHeaderGroupProps()}>
-                  {headerGroup.headers.map((column) => (
-                    <th {...column.getHeaderProps()}>
-                      {column.render("Header")}
-                    </th>
-                  ))}
+class table extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            responseFPList: '',
+            append_FPList: '',
+        }
+    }
+
+    componentDidMount() {
+        this.callFloatPopulListApi()
+    }
+
+    callFloatPopulListApi = async () => {
+            axios.get('/boxapi/', {
+            })
+            .then( response => {
+                console.log(response.data)
+                try {
+                    this.setState({ responseFPList: response });
+                    this.setState({ append_FPList: this.FloatPopulListAppend() });
+                } catch (error) {
+                    alert(error)
+                }
+            })
+            .catch( error => {alert(error);return false;} );
+    }
+
+    FloatPopulListAppend = () => {
+        let result = []
+        var FPList = this.state.responseFPList.data
+        var jsonString = JSON.stringify(FPList)
+        jsonString = jsonString.replace(/\(1시간단위\)/g, '')
+        jsonString = jsonString.replace(/\(10세단위\)/g, '')
+        var json = JSON.parse(jsonString)
+
+        for(let i=0; i<json.length; i++){
+            var data = json[i]
+            var idx = i+1
+            result.push(
+                <tr class="hidden_type">
+                    <td>{idx}</td>
+                    <td>{data.openDT}</td>
+                    <td>{data.movieNm}</td>
                 </tr>
-              ))}
-            </thead>
-            <tbody class="table_ty2 fp_tlist" {...getTableBodyProps()}>
-              {rows.map((row) => {
-                prepareRow(row);
-                return (
-                  <tr {...row.getRowProps()}>
-                    {row.cells.map((cell) => (
-                      <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
-                    ))}
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
-      </article>
-    </section>
-  );
+            )
+        }
+        return result
+    }
+
+    render () {
+        return (
+            <section>
+                <article>
+                    <div>
+                        <h2>영화 데이터 테스트</h2>
+                    </div>
+                    <div>
+                        <table>
+                            <tr>
+                                <th>Row</th>
+                                <th>일자</th>
+                            </tr>
+                        </table>	
+                        <table>
+                            {this.state.append_FPList}
+                        </table>
+                    </div>
+                </article>
+            </section>
+        );
+    }
 }
 
-export default Table;
+export default table;

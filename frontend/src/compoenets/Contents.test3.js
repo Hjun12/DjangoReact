@@ -5,7 +5,7 @@ import axios from "axios";
 const Contents = () => {
   const [confirmedData, setConfirmedData] = useState({
   })
-  
+
   useEffect(() => {
     const fetchEvents = async () => {
       const res = await axios.get("http://localhost:8000/boxapi/")
@@ -67,7 +67,7 @@ const Contents = () => {
     <section>
       <h2>그래프 내용</h2>
       <div className="contents">
-     
+       
       </div>
     </section>
   );
