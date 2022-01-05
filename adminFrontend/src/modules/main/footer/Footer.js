@@ -11,11 +11,11 @@ const Footer = () => {
             <strong>
                 <span>Copyright © {DateTime.now().toFormat('y')} </span>
                 <a
-                    href="https://erdkse.com"
+                    href="https://youtube.com"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    erdkse.com
+                    Kosmo_Team1
                 </a>
                 <span>.</span>
             </strong>
