@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./lib",
+    "jsx": "react-jsx",
+    "lib": ["ES2020", "DOM"],
+    "paths": {
+      "~*": ["./*"]
+    },
+    "types": [
+      "flat",
+      "jest-fetch-mock",
+      "jest",
+      "linkifyjs",
+      "node",
+      "prop-types",
+      "react-dom",
+      "react",
+      "testing-library__jest-dom"
+    ]
+  },
+  "include": ["lib/**/*"]
+}
