@@ -9,6 +9,8 @@ import Checkbox from './checkbox/Checkbox';
 import Input from './input/Input';
 import MovieChart from './rechart-DB/MovieChart';
 import ReactTable from './rechart-DB/ReactTable';
+import BarChart1 from './rechart-DB/BarChart1';
+import Graph1 from './rechart-DB/Graph1';
 
 export {
     Button,
@@ -20,5 +22,7 @@ export {
     Checkbox,
     Input,
     MovieChart,
-    ReactTable
+    ReactTable,
+    BarChart1,
+    Graph1
 };

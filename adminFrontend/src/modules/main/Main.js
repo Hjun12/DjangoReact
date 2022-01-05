@@ -8,8 +8,10 @@ import {toggleSidebarMenu} from '@app/store/reducers/ui';
 import Dashboard from '@pages/Dashboard';
 import Charts from '@pages/Charts';
 import Blank from '@pages/Blank';
+import Barcharts from '@pages/Barcharts';
 import SubMenu from '@pages/SubMenu';
 import Profile from '@pages/profile/Profile';
+import Graph from '@pages/Graph';
 
 import Header from './header/Header';
 import Footer from './footer/Footer';
@@ -92,6 +94,8 @@ const Main = () => {
                             <Route exact path="/profile" component={Profile} />
                             <Route exact path="/" component={Dashboard} />
                             <Route exact path="/charts" component={Charts} />
+                            <Route exact path="/blank1" component={Barcharts} />
+                            <Route exact path="/blank2" component={Graph} />
                         </Switch>
                     </section>
                 </div>

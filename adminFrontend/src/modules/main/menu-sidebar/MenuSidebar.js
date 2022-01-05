@@ -9,12 +9,20 @@ export const MENU = [
         path: '/'
     },
     {
-        name: 'Charts',
+        name: 'LineCharts',
         path: '/charts'
+    },
+    {
+        name: 'Barchart',
+        path: '/blank1'
     },
     {
         name: 'Table',
         path: '/blank'
+    },
+    {
+        name: 'Graph',
+        path: '/blank2'
     },
     {
         name: 'menusidebar.label.mainMenu',
