@@ -10,7 +10,7 @@ const Blank = () => {
                 <div className="container-fluid">
                     <div className="card">
                         <div className="card-header">
-                            <h3 className="card-title"> Bar Chart 연습</h3>
+                            <h3 className="card-title"> 외부 API 보여주기</h3>
                             <div className="card-tools">
                                 <button
                                     type="button"

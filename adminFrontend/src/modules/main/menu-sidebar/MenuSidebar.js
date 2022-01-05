@@ -25,6 +25,10 @@ export const MENU = [
         path: '/blank2'
     },
     {
+        name: 'Datas',
+        path: '/Datas'
+    },
+    {
         name: 'menusidebar.label.mainMenu',
         children: [
             {

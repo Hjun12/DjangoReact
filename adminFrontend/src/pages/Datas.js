@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import {ContentHeader, Graph1} from '@components';
+import {ContentHeader, Graph2} from '@components';
 
-const Graph = () => {
+const Datas = () => {
     return (
         <div>
             <ContentHeader title="Table Page" />
@@ -10,7 +10,7 @@ const Graph = () => {
                 <div className="container-fluid">
                     <div className="card">
                         <div className="card-header">
-                            <h3 className="card-title"> 외부 API 보여주기</h3>
+                            <h3 className="card-title"> 오세준 테스트</h3>
                             <div className="card-tools">
                                 <button
                                     type="button"
@@ -33,7 +33,7 @@ const Graph = () => {
                             </div>
                         </div>
                         <div className="card-body">
-                            <Graph1 />
+                            <Graph2 />
                         </div>
                         <div className="card-footer">Footer</div>x
                     </div>
@@ -43,4 +43,4 @@ const Graph = () => {
     );
 };
 
-export default Graph;
+export default Datas;

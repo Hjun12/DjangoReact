@@ -9,7 +9,7 @@ function ReactTable({columns, data}) {
             <article>
                 <div>
                     <div>
-                        <h2>This is where Table will come</h2>
+                        <h2>일주일간 영화 관람객 변화 데이터</h2>
                     </div>
                 </div>
                 <div>
@@ -49,33 +49,33 @@ function ReactTable({columns, data}) {
 function Table() {
     const columns = useMemo(() => [
         {
-            Header: 'ORGAN',
-            accessor: 'ORGAN_NM'
+            Header: '영화제목',
+            accessor: 'movieNm'
         },
         {
-            Header: 'TRANSMIT',
-            accessor: 'TRANSMIT_SERVER_NO'
+            Header: 'd-7',
+            accessor: 'rank'
         },
         {
-            Header: 'DATA',
-            accessor: 'DATA_NO'
+            Header: 'd-6',
+            accessor: 'salesAmt'
         },
         {
-            Header: 'COLUMN0',
-            accessor: 'COLUMN0'
+            Header: 'd-5',
+            accessor: 'salesAcc'
         },
 
         {
-            Header: 'COLUMN1',
-            accessor: 'COLUMN1'
+            Header: 'd-4',
+            accessor: 'audiCnt'
         },
         {
-            Header: 'COLUMN2',
-            accessor: 'COLUMN2'
+            Header: 'd-3',
+            accessor: 'audiAcc'
         },
         {
-            Header: 'COLUMN3',
-            accessor: 'COLUMN3'
+            Header: 'd-2',
+            accessor: 'showCnt'
         }
     ]);
 
@@ -84,10 +84,10 @@ function Table() {
         console.log('1');
         const json = await (console.log('2-2'),
         await fetch(
-            `http://openapi.seoul.go.kr:8088/746b4762786170703430676e6e4678/json/IotVdata018/1/5/`
+            `http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=b398357597117dd62ba92064607ac7a3&targetDt=20220104`
         )).json();
         console.log('2-3');
-        setdata(json.IotVdata018.row);
+        setdata(json.boxOfficeResult.dailyBoxOfficeList);
         console.log('2');
     };
 

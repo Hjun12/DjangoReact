@@ -37,7 +37,7 @@ const MovieChart = () => {
                 <YAxis datakey="rank" />
                 <Tooltip />
                 <Legend />
-                <Bar dataKey="rank" fill="#8884d8" />
+                <Bar dataKey="순위" fill="#8884d8" />
             </BarChart>
         </div>
     );

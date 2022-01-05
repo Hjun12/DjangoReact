@@ -12,6 +12,7 @@ import Barcharts from '@pages/Barcharts';
 import SubMenu from '@pages/SubMenu';
 import Profile from '@pages/profile/Profile';
 import Graph from '@pages/Graph';
+import Datas from '@pages/Datas';
 
 import Header from './header/Header';
 import Footer from './footer/Footer';
@@ -96,6 +97,7 @@ const Main = () => {
                             <Route exact path="/charts" component={Charts} />
                             <Route exact path="/blank1" component={Barcharts} />
                             <Route exact path="/blank2" component={Graph} />
+                            <Route exact path="/datas" component={Datas} />
                         </Switch>
                     </section>
                 </div>

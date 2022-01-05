@@ -11,6 +11,7 @@ import MovieChart from './rechart-DB/MovieChart';
 import ReactTable from './rechart-DB/ReactTable';
 import BarChart1 from './rechart-DB/BarChart1';
 import Graph1 from './rechart-DB/Graph1';
+import Graph2 from './rechart-DB/Graph2';
 
 export {
     Button,
@@ -24,5 +25,6 @@ export {
     MovieChart,
     ReactTable,
     BarChart1,
-    Graph1
+    Graph1,
+    Graph2
 };
