@@ -14,10 +14,10 @@ from sqlalchemy import create_engine
 from tabulate import tabulate
 
 juso_db = pymysql.connect(
-    user='team1',
-    passwd='team1',
-    host='192.168.0.41',
-    db='otte_dev',
+    user='react',
+    passwd='react',
+    host='127.0.0.1',
+    db='react',
     charset='utf8'
 )
 
@@ -25,8 +25,8 @@ juso_db = pymysql.connect(
 cursor = juso_db.cursor(pymysql.cursors.DictCursor)
 
 #날짜 값 받아와야함
-""" moviedate = 20211223 """
-moviedate = input("20211230")
+moviedate = 20211230
+# moviedate = input("20211230")
 #데이터가 있는지 검사
 sql = "SELECT * FROM `box_box` WHERE date = '%s';"
 cursor.execute(sql, moviedate)

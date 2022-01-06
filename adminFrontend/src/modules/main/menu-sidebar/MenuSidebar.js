@@ -9,6 +9,10 @@ export const MENU = [
         path: '/'
     },
     {
+        name: 'DataTable',
+        path: '/Table'
+    },
+    {
         name: 'LineCharts',
         path: '/charts'
     },

@@ -90,13 +90,24 @@ WSGI_APPLICATION = 'djangoreactapi.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 
+# DATABASES = {
+#     'default': {    #변경
+#         'ENGINE': 'mysql.connector.django', #1
+#         'NAME': 'otte_dev', #2
+#         'USER': 'team1', #3                      
+#         'PASSWORD': 'team1',  #4              
+#         'HOST': '192.168.0.41',   #5                
+#         'PORT': '3306', #6
+#     }
+# }
+
 DATABASES = {
     'default': {    #변경
         'ENGINE': 'mysql.connector.django', #1
-        'NAME': 'otte_dev', #2
-        'USER': 'team1', #3                      
-        'PASSWORD': 'team1',  #4              
-        'HOST': '192.168.0.41',   #5                
+        'NAME': 'react', #2
+        'USER': 'react', #3                      
+        'PASSWORD': 'react',  #4              
+        'HOST': '127.0.0.1',   #5                
         'PORT': '3306', #6
     }
 }
